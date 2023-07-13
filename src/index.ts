@@ -1,8 +1,17 @@
-import createZest from './encoder'
+import * as assert from 'node:assert'
 
-export const base16 = createZest(16)
-export default base16
+function toZodObj(obj: Record<string, unknown>) {}
 
-export const base32 = createZest(32)
-export const base36 = createZest(36)
-export const base62 = createZest(62)
+function toZodValue(val: unknown) {
+  if (typeof val === 'string') {
+  }
+}
+
+export function expect<T = unknown>(actual: unknown) {
+  const schema = toZodValue(actual)
+  return {
+    toMatchObject(expected: T) {
+      assert.deepEqual(actual, expected)
+    },
+  }
+}
