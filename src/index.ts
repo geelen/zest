@@ -28,10 +28,15 @@ function toZodValue(val: unknown): ZodType {
 }
 
 export function expect<T = unknown>(actual: unknown) {
+  const toMatchObject = (expected: T) => {
+    const schema = toZodValue(expected)
+    schema.parse(actual)
+  }
+
   return {
-    toMatchObject(expected: T) {
-      const schema = toZodValue(expected)
-      schema.parse(actual)
-    },
+    toMatchObject,
+    toEqual: toMatchObject,
   }
 }
+
+export { z }

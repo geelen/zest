@@ -1,7 +1,7 @@
 {
-  "name": "zest",
-  "version": "0.1.0",
-  "description": "Zod + Jest",
+  "name": "z-expect",
+  "version": "0.0.1",
+  "description": "Zod + Jest Expect = ZExpect!",
   "homepage": "https://github.com/geelen/zest#readme",
   "bugs": {
     "url": "https://github.com/geelen/zest/issues"
