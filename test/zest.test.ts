@@ -25,5 +25,17 @@ describe('zest', () => {
     err({ a: 1, b: 2 }, { a: 1, b: z.string() })
     err({ a: 1, b: 2 }, { a: 1, b: z.number().lt(0) })
     err({ a: 1, b: 2 }, { a: 1, b: z.number().gt(2) })
+
+    ok({ a: [1, 2, 3], b: { ok: true } }, { a: [1, 2, 3], b: { ok: true } })
+    ok(
+      { a: [1, 2, 3], b: { ok: true } },
+      { a: [1, 2, 3], b: { ok: z.boolean() } }
+    )
+    ok({ a: [1, 2, 3], b: { ok: true } }, { a: z.array(z.number()) })
+    ok({ a: [1, 2, 3], b: { ok: true } }, { a: z.array(z.number()).length(3) })
+
+    err({ a: [1, 2, 3], b: { ok: true } }, { a: [1, 3, 2], b: { ok: true } })
+    err({ a: [1, 2, 3], b: { ok: true } }, { a: z.array(z.string()) })
+    err({ a: [1, 2, 3], b: { ok: true } }, { a: z.array(z.number()).length(2) })
   })
 })
