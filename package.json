@@ -1,0 +1,38 @@
+{
+  "name": "zest",
+  "version": "0.1.0",
+  "description": "Convert numeric IDs to compact string encoding that sorts lexicographically in descending order.",
+  "homepage": "https://github.com/geelen/zest#readme",
+  "bugs": {
+    "url": "https://github.com/geelen/zest/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geelen/zest.git"
+  },
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.ts",
+  "module": "dist/index.ts",
+  "types": "dist/index.d.ts",
+  "author": "Glen Maddern",
+  "files": [
+    "/dist",
+    "/src"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts",
+    "test": "vitest",
+    "bench": "tsx test/bench.ts",
+    "prepublish": "pnpm build"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "benny": "^3.7.1",
+    "prettier": "^2.8.7",
+    "tsup": "^6.7.0",
+    "tsx": "^3.12.6",
+    "typescript": "^5.0.4",
+    "vitest": "^0.30.1"
+  }
+}
