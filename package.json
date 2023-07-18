@@ -6,10 +6,7 @@
   "bugs": {
     "url": "https://github.com/geelen/zest/issues"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/geelen/zest.git"
-  },
+  "repository": "github:geelen/zest",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.js",
@@ -27,6 +24,7 @@
     "prepublish": "pnpm build"
   },
   "devDependencies": {
+    "@axodotdev/oranda": "0.2.0-prerelease.1",
     "@types/node": "^18.15.11",
     "benny": "^3.7.1",
     "just-map-values": "^3.2.0",

@@ -1,4 +1,4 @@
-# Z-Expect — Zod + Jest Expect
+# <span class="oranda-hide">Z-Expect</span> = Zod + Jest Expect
 
 🎵 _WIP WIP WIP that's a Work in Progress_ 🎵
 
